@@ -13,7 +13,9 @@
 		C119C90A22423C1100CAB1F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C119C90822423C1100CAB1F5 /* Main.storyboard */; };
 		C119C90C22423C1200CAB1F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C119C90B22423C1200CAB1F5 /* Assets.xcassets */; };
 		C119C90F22423C1200CAB1F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C119C90D22423C1200CAB1F5 /* LaunchScreen.storyboard */; };
-		C119C9172242601700CAB1F5 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119C9162242601700CAB1F5 /* NetworkRequest.swift */; };
+		C119C9172242601700CAB1F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119C9162242601700CAB1F5 /* NetworkManager.swift */; };
+		C12234142242AE190022B147 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12234132242AE190022B147 /* CurrentWeather.swift */; };
+		C127ECDE2242D5D900D6C1B1 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C127ECDD2242D5D900D6C1B1 /* LocationManager.swift */; };
 		C1FF5ACA2242955300BE1696 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF5AC92242955300BE1696 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +30,9 @@
 		C119C90B22423C1200CAB1F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C119C90E22423C1200CAB1F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C119C91022423C1200CAB1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C119C9162242601700CAB1F5 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		C119C9162242601700CAB1F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C12234132242AE190022B147 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		C127ECDD2242D5D900D6C1B1 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C1FF5AC92242955300BE1696 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,8 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				C119C90422423C1100CAB1F5 /* AppDelegate.swift */,
-				C119C9162242601700CAB1F5 /* NetworkRequest.swift */,
-				C1FF5AC92242955300BE1696 /* Helper.swift */,
+				C127ECDD2242D5D900D6C1B1 /* LocationManager.swift */,
+				C127ECDC2242D50100D6C1B1 /* Model */,
+				C122340C2242A9700022B147 /* Network */,
+				C12234152242B3DB0022B147 /* Helpers */,
 				C119C90622423C1100CAB1F5 /* ViewController.swift */,
 				C119C90822423C1100CAB1F5 /* Main.storyboard */,
 				C119C90B22423C1200CAB1F5 /* Assets.xcassets */,
@@ -84,6 +90,30 @@
 				C119C91022423C1200CAB1F5 /* Info.plist */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		C122340C2242A9700022B147 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C119C9162242601700CAB1F5 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C12234152242B3DB0022B147 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C1FF5AC92242955300BE1696 /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C127ECDC2242D50100D6C1B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C12234132242AE190022B147 /* CurrentWeather.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E69A0586BCABD7764A03EC71 /* Frameworks */ = {
@@ -207,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C119C90722423C1100CAB1F5 /* ViewController.swift in Sources */,
-				C119C9172242601700CAB1F5 /* NetworkRequest.swift in Sources */,
+				C12234142242AE190022B147 /* CurrentWeather.swift in Sources */,
+				C127ECDE2242D5D900D6C1B1 /* LocationManager.swift in Sources */,
+				C119C9172242601700CAB1F5 /* NetworkManager.swift in Sources */,
 				C119C90522423C1100CAB1F5 /* AppDelegate.swift in Sources */,
 				C1FF5ACA2242955300BE1696 /* Helper.swift in Sources */,
 			);

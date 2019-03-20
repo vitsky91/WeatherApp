@@ -11,8 +11,7 @@ import UIKit
 
 class Helper {
     
-    
-    //Check for first launch -> in future can be used for adjusting language
+    //Check for first launch -> in future can be used for adjusting language used NSLocalizedString
     static func isFirstRun() -> Bool {
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore {
