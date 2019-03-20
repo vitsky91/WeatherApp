@@ -15,7 +15,11 @@ class ViewController: UIViewController, UISearchResultsUpdating {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Helper.isFirstRun()
+        
         setupNavigationController()
+        
+        request.parser()
     }
     
     fileprivate func setupNavigationController() {
@@ -39,7 +43,6 @@ class ViewController: UIViewController, UISearchResultsUpdating {
     
     @IBAction func click() {
         request.parser()
-        
     }
     
 }

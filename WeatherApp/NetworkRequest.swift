@@ -20,11 +20,8 @@ class NetworkRequest {
         Alamofire.request(openweatherURL).responseJSON { (response) in
             
             if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
-            }
-            
-            response.result.ifSuccess {
-                <#code#>
+//                print("JSON: \(json)") // serialized json response
+
             }
             
         }
