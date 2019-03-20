@@ -8,41 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UISearchResultsUpdating {
+class ViewController: UIViewController {
     
-    let request = NetworkRequest()
+    let request = NetworkManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Helper.isFirstRun()
+//        Helper.isFirstRun() ///will add it later
         
-        setupNavigationController()
-        
-        request.parser()
-    }
-    
-    fileprivate func setupNavigationController() {
-        self.navigationItem.title = "Weather App"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        
-        navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = false
-        
-    }
-    
-    
-    //MARK: - UISearchResultsUpdating
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
-    
-    
-    @IBAction func click() {
-        request.parser()
     }
     
 }
