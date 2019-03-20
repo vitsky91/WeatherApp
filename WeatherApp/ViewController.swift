@@ -39,7 +39,7 @@ class ViewController: UIViewController, UISearchResultsUpdating {
     
     @IBAction func click() {
         request.parser()
-        
+        print("vasya")
     }
     
 }
