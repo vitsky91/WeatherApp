@@ -9,6 +9,8 @@
 import Foundation
 
 class CurrentWeather {
+    
+    ///Temporary model
     var temperature: Int?
     var humidity: Int?
     var pressure: Int?

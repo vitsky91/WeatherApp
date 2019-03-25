@@ -11,12 +11,14 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    ///Needed to refactor location cheking, now just for testing
     let locationManager = CLLocationManager()
     let networkManager = NetworkManager()
     
     var currentLocation = CLLocation()
     
     var spinnerView: UIView!
+    let backgroundImageView = UIImageView()
     
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var humidity: UILabel!
@@ -25,8 +27,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setBackground()
         self.showSpinner(onView: self.view)
         self.getLocation()
+    }
+    
+    func setBackground() {
+        view.addSubview(backgroundImageView)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        
+        backgroundImageView.image = UIImage(named: "AfterNoon")
+        view.sendSubviewToBack(backgroundImageView)
     }
     
     func getLocation() {
@@ -45,6 +60,11 @@ class ViewController: UIViewController {
             locationManager.startUpdatingLocation()
         } else {
             print("Please enable location service")
+            
+            ///In future will be added city picker to use request with city name
+            DispatchQueue.main.async {
+                self.showAlert(onView: self, title: "Warning", message: "Please enable GPS and re-open app", animated: true)
+            }
         }
     }
     
@@ -79,7 +99,7 @@ class ViewController: UIViewController {
         }
     }
     
-    override var prefersStatusBarHidden: Bool { return true }
+//    override var prefersStatusBarHidden: Bool { return true }
     
 }
 
