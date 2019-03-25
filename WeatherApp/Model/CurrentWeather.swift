@@ -9,26 +9,19 @@
 import Foundation
 
 class CurrentWeather {
-    var temp: Int
-    var tempMin: Int
-    var tempMax: Int
+    var temperature: Int?
+    var humidity: Int?
+    var pressure: Int?
     
     struct WeatherKeys {
-        static let temp = "temp"
-        static let tempMin = "tempMin"
-        static let tempMax = "tempMax"
+        static let temperature = "temp"
+        static let humidity = "humidity"
+        static let pressure = "pressure"
     }
     
     init(weatherDictionary: [String:Any]) {
-        temp = weatherDictionary[WeatherKeys.temp] as! Int
-        tempMin = weatherDictionary[WeatherKeys.tempMin] as! Int
-        tempMax = weatherDictionary[WeatherKeys.tempMax] as! Int
+        if let temp = weatherDictionary[WeatherKeys.temperature] as? Double { temperature = Int(temp) }
+        humidity = weatherDictionary[WeatherKeys.humidity] as? Int
+        pressure = weatherDictionary[WeatherKeys.pressure] as? Int
     }
-    
-    /*
-     
-     
- 
-     */
-    
 }
