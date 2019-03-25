@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setBackground()
+        
         self.showSpinner(onView: self.view)
         self.getLocation()
     }
@@ -76,6 +77,7 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     if let temperature = currentWeather.temperature {
                         self.temperature.text = "\(temperature)°"
+                        self.temperature.sizeToFit()
                     } else {
                         self.temperature.text = "-"
                     }
