@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AfterNoon" translatesAutoresizingMaskIntoConstraints="NO" id="OW5-1w-vO7">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24o-Jb-4sC">
                                 <rect key="frame" x="177.5" y="316.5" width="20" height="54"/>
@@ -58,12 +58,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OW5-1w-vO7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8H3-pK-uFp"/>
-                            <constraint firstItem="OW5-1w-vO7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lby-cB-Phs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OW5-1w-vO7" secondAttribute="bottom" id="Cb9-gJ-ddd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="OW5-1w-vO7" secondAttribute="top" constant="20" id="Cgy-hK-TIe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OW5-1w-vO7" secondAttribute="trailing" id="IPA-SU-cnZ"/>
                             <constraint firstItem="24o-Jb-4sC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ODQ-a9-SXF"/>
                             <constraint firstItem="24o-Jb-4sC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Of0-GC-tan"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OW5-1w-vO7" secondAttribute="trailing" id="n2c-Nf-Dut"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OW5-1w-vO7" secondAttribute="bottom" id="oR0-ey-Dxe"/>
+                            <constraint firstItem="OW5-1w-vO7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TtM-IT-I5C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

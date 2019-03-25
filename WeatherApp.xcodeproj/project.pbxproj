@@ -21,6 +21,7 @@
 		C119C90F22423C1200CAB1F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C119C90D22423C1200CAB1F5 /* LaunchScreen.storyboard */; };
 		C119C9172242601700CAB1F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119C9162242601700CAB1F5 /* NetworkManager.swift */; };
 		C12234142242AE190022B147 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12234132242AE190022B147 /* CurrentWeather.swift */; };
+		C12640342248BC1F00B5571F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12640332248BC1F00B5571F /* Extensions.swift */; };
 		C1FF5ACA2242955300BE1696 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FF5AC92242955300BE1696 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		C119C91022423C1200CAB1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C119C9162242601700CAB1F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C12234132242AE190022B147 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		C12640332248BC1F00B5571F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C1FF5AC92242955300BE1696 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C1FF5AC92242955300BE1696 /* Helper.swift */,
+				C12640332248BC1F00B5571F /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				C12234142242AE190022B147 /* CurrentWeather.swift in Sources */,
 				C117CACA224808BB002CE50E /* MainModel.swift in Sources */,
 				C117CAD322480B26002CE50E /* WindMO.swift in Sources */,
+				C12640342248BC1F00B5571F /* Extensions.swift in Sources */,
 				C119C9172242601700CAB1F5 /* NetworkManager.swift in Sources */,
 				C119C90522423C1100CAB1F5 /* AppDelegate.swift in Sources */,
 				C117CACF22480A79002CE50E /* WeatherMO.swift in Sources */,
@@ -426,7 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.vitsky.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -445,7 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.vitsky.WeatherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

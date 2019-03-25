@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var currentLocation = CLLocation()
     
-//    @IBOutlet weak var
+    var spinnerView: UIView!
     
     @IBOutlet weak var temperature: UILabel!
     @IBOutlet weak var humidity: UILabel!
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.showSpinner(onView: self.view)
         self.getLocation()
     }
     
@@ -55,13 +56,12 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     if let temperature = currentWeather.temperature {
                         self.temperature.text = "\(temperature)°"
-//                        self.temperature.sizeToFit()
                     } else {
                         self.temperature.text = "-"
                     }
                     
                     if let humidity = currentWeather.humidity {
-                        self.humidity.text = "\(humidity) %"
+                        self.humidity.text = "\(humidity)"
                         self.humidity.sizeToFit()
                     } else {
                         self.humidity.text = "-"
@@ -74,9 +74,12 @@ class ViewController: UIViewController {
                         self.pressure.text = "-"
                     }
                 }
+                self.removeSpinner()
             }
         }
     }
+    
+    override var prefersStatusBarHidden: Bool { return true }
     
 }
 
